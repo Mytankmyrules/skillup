@@ -7,10 +7,11 @@ services:
       - ./:/var/www
   nginx:
     image: nginx:1.21
-    container_name: skillup_nginx
+    container_name: 260721_nginx
     ports:
       - 2607:80
     volumes:
       - ./:/var/www
+      - ./docker/nginx/2607.local.conf:/etc/nginx/conf.d/2607.local.conf
     depends_on:
       - app
