@@ -1,6 +1,6 @@
 <?php
 
-$x = 1 || 2 || 3;
+$x = true;
 if ($x == 1) {
     echo 1;
 }
@@ -30,9 +30,9 @@ echo '<br>','<br>';
     <h1>Calculator</h1>
     <p>
     <?php 
-    $number1 = (int)$_POST['number1'];
-    $number2 = (int)$_POST['number2'];
-    $sign = $_POST['sign'];
+    $number1 = (int)($_POST['number1'] ?? null);
+    $number2 = (int)($_POST['number2']?? null);
+    $sign = $_POST['sign']?? null;
     switch($sign) {
     case "+":
         echo "Результат:" . "$number1" . "+" . "$number2" . "=" . $number1 + $number2;
