@@ -18,10 +18,10 @@ function power(int $number, int $power): int|float
         return $number;
     }
 
-    if ($power % 2 === 0) {
+    /*if ($power % 2 === 0) {
         $result = power($number, $power / 2);
         return $result * $result;
-    }
+    }*/
 
     return $number * power($number, $power - 1);
 
